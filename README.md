@@ -21,9 +21,9 @@ $ sudo dotnet --version</br>
 
 
 $ git clone https://airband@dev.azure.com/airband/Komal/_git/Komal</br>
----
-cd into the code folder at PingAsync level
----
+
+cd into the code folder at PingAsync level</br>
+
 $ sudo dotnet build </br>
 $ sudo dotnet publish -c Release --self-contained -r ubuntu.18.04-x64</br>
 </b>
