@@ -1,10 +1,10 @@
 # Ping Apt Tool Package  Creation
-This walkthrough takes you step by step on how to create an apt package from your .NET core application the same can be easily installed on user's client machine.
+This walkthrough takes you step by step on how to create an apt package from your .NET core application code so that the same can be easily installed on user's client machine.
 
 # Deployment Steps
-<b>Step 1:</b> Click on the <b>'Deploy to Azure'</b> button below </br>
+<b>Step 1:</b> Click on the <b>'Download Code'</b> button below </br>
 
-<a href="https://azuredeploy.net/" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+<a href="" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 
 <b>Step 2:</b> Fill template form as shown below, fill the KeyVault Name with only letters between 3-24 with no numbers or special characters, ObjectId is a GUID string obtained from Azure CLI in portal, in PowerShell mode of Azure CLI type 'Get-AzADUser -UserPrincipalName foo@domain.com' repalcing foo@domain.com with your own Azure Portal email and pasting the Object Id string in the form below as shown, click <b>'Next' </b>button </br>
 <img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/1%20new.png">
