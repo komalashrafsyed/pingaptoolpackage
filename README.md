@@ -77,8 +77,9 @@ pingasync (5.0-0ubuntu1) bionic; urgency=medium
 
  -- PingAsync Tool <v-kosyed@microsoft.com>  Wed, 27 Nov 2019 22:37:13 +0000
 
-
+--------------------------------------
 <b>control</b> file changed </br>
+--------------------------------------
 
 Source: pingasync </br>
 Section: unknown </br>
@@ -99,9 +100,9 @@ Description: <insert up to 60 chars description></br>
  <insert long description, indented with spaces></br>
 
 
-
+--------------------------------------
 <b>rules</b> file changed </br>
-
+---------------------------------------
 
 #!/usr/bin/make -f
 </br>
@@ -114,16 +115,18 @@ Description: <insert up to 60 chars description></br>
 override_dh_auto_build: </br>
 	dotnet publish -c Release --self-contained -r ubuntu.18.04-x64 </br>
 	# auto-build disabled </br>
-override_dh_auto_install:</br>
-	# install application </br>
+override_dh_auto_install: </br>
+	# install application 
+	</br>
 	mkdir -p debian/pingasync/opt/ksyed/pingtool </br>
 	install -D -m 755 bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/* debian/pingasync/opt/ksyed/pingtool </br>
 	rm debian/pingasync/opt/kyaaqba/pingtool/*.pdb #delete pdb </br>
 
+--------------------------------------
+<b> pingasync.service </b> file changed </br>
+$ sudo vim pingasync.service </br>
+--------------------------------------
 
-</b> pingasync.service file changed
-
-sudo vim pingasync.service
 
 
 [Unit] </br>
@@ -138,6 +141,8 @@ ExecReload=/bin/kill -HUP $MAINPID </br>
 [Install] </br>
 WantedBy=multi-user.target </br>
 
+----------------------------------------------
+after the files are changed then go up level in folder heirarchy
 
 $ cd ..</br>
 
