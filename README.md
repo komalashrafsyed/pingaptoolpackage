@@ -153,60 +153,66 @@ $ sudo dpkg-buildpackage -b --no-sign</br>
 $ cd ..</br>
 $ sudo dpkg -i pingasync_2.0-0ubuntu1_amd64.deb</br>
 
-$ sudo apt-get install gnupg rng-tools
-$ gpg --gen-key
+$ sudo apt-get install gnupg rng-tools </br>
+$ gpg --gen-key </br>
 #copy the key above
+</br>
 
 # position in directory /Komal/Asyn-r-code/repo
-$ sudo apt-get install reprepro
-$ mkdir repo && cd repo
-$ mkdir conf && cd conf
-$ touch distributions
+</br>
+$ sudo apt-get install reprepro </br>
+$ mkdir repo && cd repo </br>
+$ mkdir conf && cd conf </br>
+$ touch distributions </br>
 
-$ sudo vim distributions
+$ sudo vim distributions</br>
 
-
-#change your file name and put the key SignWith below
+--------------------------------------
+<b>distributions </b> file changed </br>
+#change your file name and put the key SignWith below 
+</br>
 # this is the pub key id given earlier step 
-Origin: PingAsync Tool
-Label: pingasync
-Codename: bionic
-Architectures: amd64
-Components: main
-Description: Personal repository
-SignWith: B501DE17DA19A16F 
+</br>
+---------------------------------------
+
+Origin: PingAsync Tool </br>
+Label: pingasync </br>
+Codename: bionic </br>
+Architectures: amd64 </br>
+Components: main </br>
+Description: Personal repository </br>
+SignWith: B501DE17DA19A16F  </br>
 
 
 
  #give path of repo and also of the deb file if you in the folder where both
+ </br>
  #the repo folder and the deb file are on same level then dont need to give it a path
-$ sudo reprepro --basedir repo includedeb bionic pingasync_4.0-0ubuntu1_amd64.deb
+ </br>
+$ sudo reprepro --basedir repo includedeb bionic pingasync_4.0-0ubuntu1_amd64.deb </br>
+$ sudo reprepro --basedir repo includedeb bionic pingasync*.deb </br>
+$ reprepro --basedir repo list bionic </br>
 
-sudo reprepro --basedir repo includedeb bionic pingasync*.deb
+$ gpg --output PUBLIC.KEY --armor --export v-kosyed@microsoft.com </br>
+$ mv PUBLIC.KEY repo </br>
 
-
-$ reprepro --basedir repo list bionic
-
-
-$ gpg --output PUBLIC.KEY --armor --export v-kosyed@microsoft.com
-$ mv PUBLIC.KEY repo
-
-$ cd repo
-$ sudo mv PUBLIC.KEY
-$ sudo mv db
-$ sudo mv conf
-$ sudo mv pool
+$ cd repo </br>
+$ sudo mv PUBLIC.KEY </br>
+$ sudo mv db </br>
+$ sudo mv conf </br>
+$ sudo mv pool </br>
 
 
-$ git clone ---- distination url of an online empty repo
-$ git add --all
-$ git commit -m "Package repository"
-$ git push
-
+$ git clone ---- distination url of an online empty repo </br>
+$ git add --all </br>
+$ git commit -m "Package repository" </br>
+$ git push </br>
+ 
 #enter username and password for your git repo
+</br>
 
 
-</b>
+
 <b> At this stage the Ping Utilty is installed in your system ready to be used! </b></br>
 <img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/26.png" >
 
