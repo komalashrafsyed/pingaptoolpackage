@@ -12,7 +12,7 @@ use the <b>git clone codeurl</b> command to download the code to your VM </br>
 
 <b>Step 3:</b> After you ssh into the VM, you can type the following to install the relevant required packages</br>
 <b>
-$ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb</br>
+$ sudo wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb</br>
 $ sudo dpkg -i packages-microsoft-prod.deb</br>
 $ sudo apt-get install apt-transport-https</br>
 $ sudo apt-get update</br>
@@ -149,8 +149,8 @@ $ cd ..</br>
 $ sudo dpkg-buildpackage -b --no-sign</br>
 
 
-$ cd ..
-$ sudo dpkg -i pingasync_2.0-0ubuntu1_amd64.deb
+$ cd ..</br>
+$ sudo dpkg -i pingasync_2.0-0ubuntu1_amd64.deb</br>
 
 $ sudo apt-get install gnupg rng-tools
 $ gpg --gen-key
