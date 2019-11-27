@@ -167,8 +167,7 @@ $ sudo apt-get install gnupg rng-tools </br>
 $ gpg --gen-key </br>
 #copy the key above
 </br>
-
-# position in directory /Komal/Asyn-r-code/repo
+#position in directory '/Komal/Asyn-r-code/repo'
 </br>
 $ sudo apt-get install reprepro </br>
 $ mkdir repo && cd repo </br>
