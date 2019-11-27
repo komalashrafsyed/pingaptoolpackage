@@ -1,0 +1,2 @@
+# pinasynctool
+apt package update
