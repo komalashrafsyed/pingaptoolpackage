@@ -1,21 +1,14 @@
 # Ping Apt Tool Package  Creation
-This walkthrough takes you step by step on how to create an apt package from your .NET core application code so that the same can be easily installed on user's client machine.
+This walkthrough takes you step by step on how to create an apt package from your .NET Core 3.0 application code so that the same apt package can be easily installed on user's client machine using a simple apt-install command.
 
 # Deployment Steps
-<b>Step 1:</b> Click on the <b>'Download Code'</b> button below </br>
+<b>Step 1:</b> You need to <b>'Download Code'</b> for your .NET Core Application from <a href="https://dev.azure.com/airband/_git/Komal">here</a> </br>
 
-<a href="" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+<b>Step 2:</b> You need a Linux OS based virtual machine, you can use the following command to create one, or you can even use an existing Vm </br>
 
-<b>Step 2:</b> Fill template form as shown below, fill the KeyVault Name with only letters between 3-24 with no numbers or special characters, ObjectId is a GUID string obtained from Azure CLI in portal, in PowerShell mode of Azure CLI type 'Get-AzADUser -UserPrincipalName foo@domain.com' repalcing foo@domain.com with your own Azure Portal email and pasting the Object Id string in the form below as shown, click <b>'Next' </b>button </br>
-<img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/1%20new.png">
-<b>Azure CLI</b> How to obtain <b>'ObjectId'</b> field value from Azure CLI</br>
-<img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/0.5.png">
+az vm create --resource-group myResourceGroup --name myVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys
 
-
-
-
-
-<b>Step 2:</b> After ssh into the VM, you type the following to install</br>
+<b>Step 3:</b> After you ssh into the VM, you can type the following to install the relevant required packages</br>
 <b>
 $ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb</br>
 $ sudo dpkg -i packages-microsoft-prod.deb</br>
