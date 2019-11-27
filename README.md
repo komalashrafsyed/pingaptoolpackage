@@ -44,7 +44,6 @@ $ sudo dotnet-symbol --symbols bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publis
 </br>
 $ sudo apt install gnupg pbuilder ubuntu-dev-tools apt-file dh-make bzr-builddeb</br>
 
-
 $ export DEBEMAIL="v-kosyed@microsoft.com"</br>
 
 $ export DEBFULLNAME="PingAsync Tool"</br>
@@ -72,71 +71,73 @@ Files Changes
 changelog
 
 "
-pingasync (1.0-0ubuntu1) bionic; urgency=medium
+pingasync (5.0-0ubuntu1) bionic; urgency=medium
 
   * Initial Release.
 
- -- Karam Yaaqba <v-kayaaq@microsoft.com>  Tue, 29 Oct 2019 15:49:48 -0700
-"
+ -- PingAsync Tool <v-kosyed@microsoft.com>  Wed, 27 Nov 2019 22:37:13 +0000
 
-control 
 
-"
-Source: pingasync
-Section: unknown
-Priority: optional
-Maintainer: root <v-kosyed@microsoft.com>
-Build-Depends: debhelper (>= 10)
-Standards-Version: 4.1.2
-Homepage: <insert the upstream URL, if relevant>
+<b>control</b> file changed </br>
+
+Source: pingasync </br>
+Section: unknown </br>
+Priority: optional</br>
+Maintainer: root <v-kosyed@microsoft.com></br>
+Build-Depends: debhelper (>= 10)</br>
+Standards-Version: 4.1.2</br>
+Homepage: <insert the upstream URL, if relevant></br>
 #Vcs-Git: https://anonscm.debian.org/git/collab-maint/pingasync.git
+</br>
 #Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/pingasync.git
+</br>
 
-Package: pingasync
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: pingasync</br>
+Architecture: any</br>
+Depends: ${shlibs:Depends}, ${misc:Depends}</br>
+Description: <insert up to 60 chars description></br>
+ <insert long description, indented with spaces></br>
 
-"
 
-rules
 
-"
+</b>rules<b> file changed </br>
+
+
 #!/usr/bin/make -f
+</br>
 #export DH_VERBOSE = 1
+</br>
+%: </br>
+	dh $@ --with=systemd </br>
 
-%:
-	dh $@ --with=systemd
+
+override_dh_auto_build: </br>
+	dotnet publish -c Release --self-contained -r ubuntu.18.04-x64 </br>
+	# auto-build disabled </br>
+override_dh_auto_install:</br>
+	# install application </br>
+	mkdir -p debian/pingasync/opt/ksyed/pingtool </br>
+	install -D -m 755 bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/* debian/pingasync/opt/ksyed/pingtool </br>
+	rm debian/pingasync/opt/kyaaqba/pingtool/*.pdb #delete pdb </br>
 
 
-override_dh_auto_build:
-	dotnet publish -c Release --self-contained -r ubuntu.18.04-x64
-	# auto-build disabled
-override_dh_auto_install:
-	# install application
-	mkdir -p debian/pingasync/opt/kyaaqba/pingtool
-	install -D -m 755 bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/* debian/pingasync/opt/kyaaqba/pingtool
-	rm debian/pingasync/opt/kyaaqba/pingtool/*.pdb #delete pdb
-
-"
+</b> pingasync.service file changed
 
 sudo vim pingasync.service
 
-"
-[Unit]
-Description=Ping Async
-After=network.target
 
-[Service]
-Type=simple
-ExecStart=/opt/ksyed/pingtool/pingtool
-ExecReload=/bin/kill -HUP $MAINPID
+[Unit] </br>
+Description=Ping Async </br>
+After=network.target </br>
 
-[Install]
-WantedBy=multi-user.target
+[Service] </br>
+Type=simple </br>
+ExecStart=/opt/ksyed/pingtool/pingtool </br>
+ExecReload=/bin/kill -HUP $MAINPID </br>
 
-"
+[Install] </br>
+WantedBy=multi-user.target </br>
+
 
 $ cd ..</br>
 
