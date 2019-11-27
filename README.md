@@ -150,8 +150,10 @@ WantedBy=multi-user.target </br>
 
 
 <img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/pingasyncservice.png" >
-----------------------------------------------
-after the files are changed then go up level in folder heirarchy
+
+</br>
+
+after the files are changed then go up level in folder heirarchy </br>
 
 $ cd ..</br>
 
