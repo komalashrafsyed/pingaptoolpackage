@@ -4,9 +4,11 @@ This walkthrough takes you step by step on how to create an apt package from you
 # Deployment Steps
 <b>Step 1:</b> You need to <b>'Download Code'</b> for your .NET Core Application from <a href="https://dev.azure.com/airband/_git/Komal">here</a> </br>
 
+use the <b>git clone codeurl</b> command to download the code to your VM </br>
+
 <b>Step 2:</b> You need a Linux OS based virtual machine, you can use the following command to create one, or you can even use an existing Vm </br>
 
-az vm create --resource-group myResourceGroup --name myVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys
+<b> az vm create --resource-group myResourceGroup --name myVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys </b>
 
 <b>Step 3:</b> After you ssh into the VM, you can type the following to install the relevant required packages</br>
 <b>
