@@ -6,7 +6,7 @@ This walkthrough takes you step by step on how to create an apt package from you
 
 use the <b>git clone codeurl</b> command to download the code to your VM </br>
 
-<b>Step 2:</b> You need a Linux OS based virtual machine, you can use the following command to create one, or you can even use an existing Vm </br>
+<b>Step 2:</b> You need a Linux OS based virtual machine, you can use the following command to create one, or you can even use an existing VM </br>
 
 <b> az vm create --resource-group myResourceGroup --name myVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys </b>
 
@@ -21,13 +21,13 @@ $ sudo dotnet --version</br>
 
 
 $ git clone https://airband@dev.azure.com/airband/Komal/_git/Komal</br>
-$ sudo dotnet build
+$ sudo dotnet build </br>
 $ sudo dotnet publish -c Release --self-contained -r ubuntu.18.04-x64</br>
 
 
 #run this
 $ sudo dotnet tool install -g dotnet-symbol</br>
-#okif this doesnt run as the .NET SDK is 2.1
+#it is ok if the following command doesnt run as it if for .NET SDK 2.1
 $ sudo dotnet-symbol --symbols bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/</br>
 
 
