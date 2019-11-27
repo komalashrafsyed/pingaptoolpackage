@@ -36,10 +36,12 @@ $ sudo dotnet-symbol --symbols bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publis
 #run the following
 $ sudo dotnet tool install -g dotnet-symbol</br>
 
-#skip this
+#skip this if it doesnt run that is fine as well
+</br>
 $ sudo dotnet-symbol --symbols bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/</br>
 
-#RUN THIS!!
+#RUN THIS!! 
+</br>
 $ sudo apt install gnupg pbuilder ubuntu-dev-tools apt-file dh-make bzr-builddeb</br>
 
 
