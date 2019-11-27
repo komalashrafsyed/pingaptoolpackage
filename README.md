@@ -69,9 +69,10 @@ $ sudo rm README README.Debian README.source pingasync-docs.docs </br>
 
 Files Changes
 
-changelog
+--------------------------------------
+<b>changelog</b> file changed </br>
+--------------------------------------
 
-"
 pingasync (5.0-0ubuntu1) bionic; urgency=medium
 
   * Initial Release.
