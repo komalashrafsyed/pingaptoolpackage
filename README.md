@@ -23,7 +23,7 @@ $ sudo dotnet --version</br>
 $ git clone https://airband@dev.azure.com/airband/Komal/_git/Komal</br>
 $ sudo dotnet build </br>
 $ sudo dotnet publish -c Release --self-contained -r ubuntu.18.04-x64</br>
-
+</b>
 
 #run this 
 </br>
@@ -100,7 +100,7 @@ Description: <insert up to 60 chars description></br>
 
 
 
-</b>rules<b> file changed </br>
+<b>rules</b> file changed </br>
 
 
 #!/usr/bin/make -f
