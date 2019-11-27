@@ -79,6 +79,8 @@ pingasync (5.0-0ubuntu1) bionic; urgency=medium
 
  -- PingAsync Tool <v-kosyed@microsoft.com>  Wed, 27 Nov 2019 22:37:13 +0000
 
+<img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/changelog.png" >
+
 --------------------------------------
 <b>control</b> file changed </br>
 --------------------------------------
@@ -101,6 +103,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}</br>
 Description: <insert up to 60 chars description></br>
  <insert long description, indented with spaces></br>
 
+<img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/control.png" >
 
 --------------------------------------
 <b>rules</b> file changed </br>
@@ -124,6 +127,8 @@ override_dh_auto_install: </br>
 	install -D -m 755 bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/* debian/pingasync/opt/ksyed/pingtool </br>
 	rm debian/pingasync/opt/kyaaqba/pingtool/*.pdb #delete pdb </br>
 
+<img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/rules.png" >
+
 --------------------------------------
 <b> pingasync.service </b> file changed </br>
 $ sudo vim pingasync.service </br>
@@ -143,6 +148,8 @@ ExecReload=/bin/kill -HUP $MAINPID </br>
 [Install] </br>
 WantedBy=multi-user.target </br>
 
+
+<img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/pingasyncservice.png" >
 ----------------------------------------------
 after the files are changed then go up level in folder heirarchy
 
