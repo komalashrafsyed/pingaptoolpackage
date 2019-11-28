@@ -195,7 +195,7 @@ $ mkdir conf && cd conf </br>
 $ touch distributions </br>
 
 $ sudo vim distributions</br>
-
+</b>
 --------------------------------------
 <b>distributions </b> file changed </br>
 #change your file name and put the key SignWith below 
@@ -220,7 +220,7 @@ SignWith: B501DE17DA19A16F  </br>
  </br>
 $ sudo reprepro --basedir repo includedeb bionic pingasync_4.0-0ubuntu1_amd64.deb </br>
 $ sudo reprepro --basedir repo includedeb bionic pingasync*.deb </br>
-$ reprepro --basedir repo list bionic </br>
+$ sudo reprepro --basedir repo list bionic </br>
 
 $ gpg --output PUBLIC.KEY --armor --export v-kosyed@microsoft.com </br>
 $ mv PUBLIC.KEY repo </br>
