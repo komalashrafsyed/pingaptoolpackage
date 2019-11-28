@@ -198,11 +198,12 @@ $ sudo vim distributions</br>
 
 --------
 <b>distributions </b> file changed </br>
+--------
+
 #change your file name and put the key SignWith below 
 </br>
 #this is the pub key id given earlier step 
 </br>
---------
 
 Origin: PingAsync Tool </br>
 Label: pingasync </br>
