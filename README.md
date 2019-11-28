@@ -224,7 +224,7 @@ $ sudo reprepro --basedir repo includedeb bionic pingasync*.deb </br>
 $ sudo reprepro --basedir repo list bionic </br>
 
 $ sudo gpg --output PUBLIC.KEY --armor --export v-kosyed@microsoft.com </br>
-$ mv PUBLIC.KEY repo </br>
+$ sudo mv PUBLIC.KEY repo </br>
 
 $ cd repo </br>
 $ sudo mv PUBLIC.KEY </br>
