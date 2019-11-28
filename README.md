@@ -125,7 +125,8 @@ override_dh_auto_install: </br>
 	</br>
 	mkdir -p debian/pingasync/opt/ksyed/pingtool </br>
 	install -D -m 755 bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/* debian/pingasync/opt/ksyed/pingtool </br>
-	rm debian/pingasync/opt/kyaaqba/pingtool/*.pdb #delete pdb </br>
+	rm debian/pingasync/opt/ksyed/pingtool/*.pdb #delete pdb
+	</br>
 
 <img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/rules.png" >
 
@@ -158,6 +159,19 @@ after the files are changed then go up level in folder heirarchy </br>
 $ cd ..</br>
 
 $ sudo dpkg-buildpackage -b --no-sign</br>
+
+#if the above exits with error code 2 and does not go through run the following 3 commands marked with a *
+</br>
+*****
+*
+$ sudo apt-get install lttng-tools </br> 
+*
+$ sudo apt-get install lttng-modules-dkms </br>
+*
+$ apt-get install liblttng-ust-dev </br>
+
+***
+
 
 
 $ cd ..</br>
