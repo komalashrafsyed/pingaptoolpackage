@@ -169,10 +169,8 @@ $ sudo apt-get install lttng-modules-dkms </br>
 *
 $ apt-get install liblttng-ust-dev </br>
 
-***
 
-
-
+------
 $ cd ..</br>
 $ sudo dpkg -i pingasync_2.0-0ubuntu1_amd64.deb </br>
 $ sudo apt-get install gnupg rng-tools </br>
