@@ -174,23 +174,18 @@ $ apt-get install liblttng-ust-dev </br>
 
 
 $ cd ..</br>
-$ sudo dpkg -i pingasync_2.0-0ubuntu1_amd64.deb</br>
-
+$ sudo dpkg -i pingasync_2.0-0ubuntu1_amd64.deb </br>
 $ sudo apt-get install gnupg rng-tools </br>
 $ gpg --gen-key </br>
 #copy the key above should be in the form below
 </br>
 ----
-pub   rsa3072 2019-11-28 [SC] [expires: 2021-11-27]
-      DDD8719980B636FFC725A71072A40C338E37315E
-uid                      PingAsync Tool <v-kosyed@microsoft.com>
-sub   rsa3072 2019-11-28 [E] [expires: 2021-11-27]
+pub   rsa3072 2019-11-28 [SC] [expires: 2021-11-27] </br>
+      DDD8719980B636FFC725A71072A40C338E37315E </br>
+uid                      PingAsync Tool <v-kosyed@microsoft.com> </br>
+sub   rsa3072 2019-11-28 [E] [expires: 2021-11-27] </br>
 
-----
 <img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/gpg%20gen%20key.png" >
-
-
-
 
 
 #position in directory '/Komal/Asyn-r-code/repo'
