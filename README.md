@@ -162,7 +162,6 @@ $ sudo dpkg-buildpackage -b --no-sign</br>
 
 #if the above exits with error code 2 and does not go through run the following 3 commands marked with a *
 </br>
-*****
 *
 $ sudo apt-get install lttng-tools </br> 
 *
