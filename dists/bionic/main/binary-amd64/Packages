@@ -1,0 +1,17 @@
+Package: pingasync
+Version: 5.0-0ubuntu1
+Architecture: amd64
+Maintainer: root <v-kosyed@microsoft>
+Installed-Size: 79876
+Depends: libc6 (>= 2.14), libcurl4 (>= 7.16.2), libgcc1 (>= 1:3.0), libgssapi-krb5-2 (>= 1.14+dfsg), liblttng-ust0 (>= 2.5.0), libstdc++6 (>= 4.8), zlib1g (>= 1:1.1.4)
+Homepage: <insert the upstream URL, if relevant>
+Priority: optional
+Section: unknown
+Filename: pool/main/p/pingasync/pingasync_5.0-0ubuntu1_amd64.deb
+Size: 23401448
+SHA256: ea57aa205c92e3ccaef47f9e02ed8970db7ac4101fee28af41beefc2113f9657
+SHA1: a695e695ab9babad1183691bda50ddd9b8df9f08
+MD5sum: ed96bc2a9eed3f6f0b4c961eb8101bfe
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+

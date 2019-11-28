@@ -1,0 +1,5 @@
+Component: main
+Origin: PingAsync Tool
+Label: pingasync
+Architecture: amd64
+Description: Personal repository
