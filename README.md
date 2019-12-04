@@ -45,7 +45,7 @@ $ sudo dotnet-symbol --symbols bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publis
 </br>
 $ sudo apt install gnupg pbuilder ubuntu-dev-tools apt-file dh-make bzr-builddeb</br>
 
-$ export DEBEMAIL="v-kosyed@microsoft.com"</br>
+$ export DEBEMAIL="******syed@microsoft.com"</br>
 
 $ export DEBFULLNAME="PingAsync Tool"</br>
 
@@ -77,7 +77,7 @@ pingasync (5.0-0ubuntu1) bionic; urgency=medium
 
   * Initial Release.
 
- -- PingAsync Tool <v-kosyed@microsoft.com>  Wed, 27 Nov 2019 22:37:13 +0000
+ -- PingAsync Tool <*****syed@microsoft.com>  Wed, 27 Nov 2019 22:37:13 +0000
 
 <img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/changelog.png" >
 
@@ -88,7 +88,7 @@ pingasync (5.0-0ubuntu1) bionic; urgency=medium
 Source: pingasync </br>
 Section: unknown </br>
 Priority: optional</br>
-Maintainer: root <v-kosyed@microsoft.com></br>
+Maintainer: root <******syed@microsoft.com></br>
 Build-Depends: debhelper (>= 10)</br>
 Standards-Version: 4.1.2</br>
 Homepage: <insert the upstream URL, if relevant></br>
@@ -181,7 +181,7 @@ $ gpg --gen-key </br>
 </br>
 pub   rsa3072 2019-11-28 [SC] [expires: 2021-11-27] </br>
       DDDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX315E </br>
-uid                      PingAsync Tool <v-kosyed@microsoft.com> </br>
+uid                      PingAsync Tool <******syed@microsoft.com> </br>
 sub   rsa3072 2019-11-28 [E] [expires: 2021-11-27] </br>
 </br>
 <img src="https://komalsandboxdiag.blob.core.windows.net/pingarmtemplatereadmefiles/gpg%20gen%20key.png" >
@@ -223,7 +223,7 @@ $ sudo reprepro --basedir repo includedeb bionic pingasync_4.0-0ubuntu1_amd64.de
 $ sudo reprepro --basedir repo includedeb bionic pingasync*.deb </br>
 $ sudo reprepro --basedir repo list bionic </br>
 
-$ sudo gpg --output PUBLIC.KEY --armor --export v-kosyed@microsoft.com </br>
+$ sudo gpg --output PUBLIC.KEY --armor --export ******syed@microsoft.com </br>
 $ sudo mv PUBLIC.KEY repo </br>
 
 $ cd repo </br>
